@@ -51,7 +51,10 @@ function mostra_form_aziende() {
 /*----- GESTIONE MENU HAMBURGER -----*/
 
 function apri_menu() {
-  if (menu.style.display === "flex") {
+  if (
+    menu.style.display === "flex" &&
+    window.matchMedia("(max-width: 991px)").matches
+  ) {
     menu.style.display = "none";
     document.getElementById("sottomenu").style.display = "none";
   } else {
@@ -65,11 +68,11 @@ let pulsante_sottomeu = document.getElementById("pulsante_sottomenu");
 
 /* prevengo il click se sono sulla pagina azienda */
 if (window.matchMedia("(max-width: 991px)").matches) {
-    pulsante_sottomeu.href = "javascript:void(0)";
+  pulsante_sottomeu.href = "javascript:void(0)";
 }
 window.addEventListener("resize", () => {
   if (window.matchMedia("(max-width: 991px)").matches) {
-      pulsante_sottomeu.href = "javascript:void(0)";
+    pulsante_sottomeu.href = "javascript:void(0)";
   } else {
     pulsante_sottomeu.href = "azienda.html";
   }

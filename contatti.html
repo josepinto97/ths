@@ -18,58 +18,66 @@
 </head>
 
 <body>
-<header>
-    <div class="menu-fisso">
-      <div class="container contenitore-header">
-        <div class="logo">
-          <a href="index.html"><img src="img/ths_logo.png" alt="logo azienda" /></a>
+    <header>
+        <div class="menu-fisso">
+            <div class="container contenitore-header">
+                <div class="logo">
+                    <a href="index.html"><img src="img/ths_logo.png" alt="logo azienda" /></a>
+                </div>
+                <nav>
+                    <ul class="menu" id="menu">
+                        <li>
+                            <a href="index.html"><i class="bi bi-house"></i>Home</a>
+                        </li>
+                        <li class="contenitore-sottomenu">
+                            <a href="azienda.html" id="pulsante_sottomenu" onclick="apri_menu_responsive()"><i
+                                    class="bi bi-building"></i>Azienda<i
+                                    class="freccia-sottomenu bi bi-chevron-down"></i></a>
+                            <ul class="sottomenu" id="sottomenu">
+                                <li>
+                                    <a href="azienda.html#chi_siamo" onclick="apri_menu()"><i
+                                            class="bi bi-briefcase"></i>Chi Siamo</a>
+                                </li>
+                                <li>
+                                    <a href="azienda.html#servizi" onclick="apri_menu()"><i
+                                            class="bi bi-headphones"></i>Servizi</a>
+                                </li>
+                                <li>
+                                    <a href="azienda.html#hardware" onclick="apri_menu()"><i
+                                            class="bi bi-display"></i>Hardware</a>
+                                </li>
+                                <li>
+                                    <a href="azienda.html#software" onclick="apri_menu()"><i
+                                            class="bi bi-code"></i>Software</a>
+                                </li>
+                                <li>
+                                    <a href="azienda.html#prodotti" onclick="apri_menu()"><i
+                                            class="bi bi-hdd-rack"></i>Prodotti</a>
+                                </li>
+                                <li>
+                                    <a href="azienda.html#referenze" onclick="apri_menu()"><i
+                                            class="bi bi-people"></i>Referenze</a>
+                                </li>
+                                <li>
+                                    <a href="azienda.html#partners" onclick="apri_menu()"><i
+                                            class="bi bi-person-plus"></i>Partners</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="manutenzione.html"><i class="bi bi-shop-window"></i>Shop</a>
+                        </li>
+                        <li>
+                            <a href="contatti.html"><i class="bi bi-telephone"></i>Contatti</a>
+                        </li>
+                    </ul>
+                    <div class="menu-hamburger" onclick="apri_menu()">
+                        <i class="bi bi-list"></i>
+                    </div>
+                </nav>
+            </div>
         </div>
-        <nav>
-          <ul class="menu" id="menu">
-            <li>
-              <a href="index.html"><i class="bi bi-house"></i>Home</a>
-            </li>
-            <li class="contenitore-sottomenu">
-              <a href="azienda.html" id="pulsante_sottomenu" onclick="apri_menu_responsive()"><i
-                  class="bi bi-building"></i>Azienda<i class="freccia-sottomenu bi bi-chevron-down"></i></a>
-              <ul class="sottomenu" id="sottomenu">
-                <li>
-                  <a href="azienda.html#chi_siamo" onclick="apri_menu()"><i class="bi bi-briefcase"></i>Chi Siamo</a>
-                </li>
-                <li>
-                  <a href="azienda.html#servizi" onclick="apri_menu()"><i class="bi bi-headphones"></i>Servizi</a>
-                </li>
-                <li>
-                  <a href="azienda.html#hardware" onclick="apri_menu()"><i class="bi bi-display"></i>Hardware</a>
-                </li>
-                <li>
-                  <a href="azienda.html#software" onclick="apri_menu()"><i class="bi bi-code"></i>Software</a>
-                </li>
-                <li>
-                  <a href="azienda.html#prodotti" onclick="apri_menu()"><i class="bi bi-hdd-rack"></i>Prodotti</a>
-                </li>
-                <li>
-                  <a href="azienda.html#referenze" onclick="apri_menu()"><i class="bi bi-people"></i>Referenze</a>
-                </li>
-                <li>
-                  <a href="azienda.html#partners" onclick="apri_menu()"><i class="bi bi-person-plus"></i>Partners</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="manutenzione.html"><i class="bi bi-shop-window"></i>Shop</a>
-            </li>
-            <li>
-              <a href="contatti.html"><i class="bi bi-telephone"></i>Contatti</a>
-            </li>
-          </ul>
-          <div class="menu-hamburger" onclick="apri_menu()">
-            <i class="bi bi-list"></i>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
+    </header>
 
 
     <main>
@@ -94,7 +102,8 @@
                 <div class="col-8 contattaci">
                     <h3>Contatti</h3>
                     <div class="tipologia-form">
-                        <a onclick="mostra_form_aziende()" class="form-aziende" id="form_aziende">Azienda/Libero professionista</a>
+                        <a onclick="mostra_form_aziende()" class="form-aziende" id="form_aziende">Azienda/Libero
+                            professionista</a>
                         <a onclick="mostra_form_privati()" class="form-privati" id="form_privati">Privato</a>
                     </div>
                     <div class="contenitore-form contenitore-form-aziende" id="contenitore_form_aziende">
@@ -166,10 +175,10 @@
                                     oninvalid="this.setCustomValidity('Cognome obbligatorio.')"
                                     oninput="this.setCustomValidity('')" />
                             </div>
-                                <input type="text" id="codice_fiscale" name="codice_fiscale" required
-                                    placeholder="Codice Fiscale"
-                                    oninvalid="this.setCustomValidity('Il codice fiscale è obbligatorio.')"
-                                    oninput="this.setCustomValidity('')" />
+                            <input type="text" id="codice_fiscale" name="codice_fiscale" required
+                                placeholder="Codice Fiscale"
+                                oninvalid="this.setCustomValidity('Il codice fiscale è obbligatorio.')"
+                                oninput="this.setCustomValidity('')" />
                             <input type="email" id="email" name="email" required placeholder="Indirizzo Email"
                                 oninvalid="this.setCustomValidity('Indirizzo email obbligatorio')"
                                 oninput="this.setCustomValidity('')">
@@ -220,16 +229,17 @@
             </div>
             <div class="socials">
                 <div>
-                    <a href="shop.html"><i class="bi bi-shop-window"></i></a>
+                    <a href="manutenzione.html"><i class="bi bi-shop-window"></i></a>
                 </div>
                 <div class="mail">
-                    <a href=""><i class="bi bi-envelope"></i></a>
+                    <a href="mailto:serviceweb@thsbo.it"><i class="bi bi-envelope"></i></a>
                 </div>
                 <div>
-                    <a href=""><i class="bi bi-telephone"></i></a>
+                    <a href="tel:+39051863340"><i class="bi bi-telephone"></i></a>
                 </div>
                 <div class="linkedin">
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/company/th-s-bologna-srl/" target="_blank"><i
+                            class="bi bi-linkedin"></i></a>
                 </div>
             </div>
         </div>

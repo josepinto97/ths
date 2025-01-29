@@ -251,6 +251,8 @@ main .descrizione-azienda section {
 
 main .descrizione-azienda section div {
   width: 50%;
+  height: 100%;
+  margin: auto;
 }
 
 main .descrizione-azienda .descrizione {
@@ -312,7 +314,7 @@ main .colore4 {
 
 main .descrizione-immagine img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 main .inverti {
